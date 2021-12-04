@@ -1,35 +1,35 @@
 class Account:
-   # Construct an Account object
-   def __init__(self, id, balance = 100, annualInterestRate = 0):
+   # Deinfine the Class Account
+   def __init__(self, id, balance = 100, annualInterestRate = 0): #set id, balance, annualInterestRate
        self.__id = id
        self.__balance = balance
        self.__annualInterestRate = annualInterestRate
 
-   def getId(self):
+   def getId(self): #return account id
        return self.__id
 
-   def getBalance(self):
+   def getBalance(self): # return current balance
        return self.__balance
 
-   def getAnnualInterestRate(self):
+   def getAnnualInterestRate(self): # return interest rate annually
        return self.__annualInterestRate
 
-   def getMonthlyInterestRate(self):
+   def getMonthlyInterestRate(self): # determine monthly interest rate
        return self.__annualInterestRate / 12
 
-   def setPreviousPrice(self, previousPrice):
+   def setPreviousPrice(self, previousPrice): # define the previous balance
        self.previousPrice = previousPrice
 
-   def setCurrentPrice(self, currentPrice):
+   def setCurrentPrice(self, currentPrice): # define the current balance
        self.currentPrice = currentPrice
 
-   def withdraw(self, amount):
+   def withdraw(self, amount): # amount to withdraw
        self.__balance -= amount
 
-   def deposit(self, amount):
+   def deposit(self, amount): # amount to deposit
        self.__balance += amount
 
-   def getMonthlyInterest(self):
+   def getMonthlyInterest(self): # return the monthly interest
        return self.__balance * self.getMonthlyInterestRate()
 
 def main():
@@ -43,7 +43,7 @@ def main():
        account = Account(i, 100.0);
        accounts.append(account);
       
-   # Playing Game ATM   
+      
    while True:
   
        # Reading id from user
