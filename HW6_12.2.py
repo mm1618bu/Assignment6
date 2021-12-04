@@ -1,14 +1,14 @@
-class Location:
-    def __init__(self,row=0,column=0,maxValue=0):
+class Location: #Define the Location Class
+    def __init__(self,row=0,column=0,maxValue=0): #set initial values for row, column and maxvalue
         self.row = row
         self.column = column
         self.maxValue = maxValue
 
-    def __str__(self):
+    def __str__(self): #return values
         return "(Row : "+str(self.row)+" Column : "+str(self.column)+" Value : "+str(self.maxValue)+")";
 
 
-def locateLargest(a):
+def locateLargest(a): #find the largest item
     r=0
     c=0
     m=-1
@@ -20,10 +20,10 @@ def locateLargest(a):
                 c = j
     return Location(r,c,a[r][c])
   
-print('Enter the number of rows and columns in the list: ',end='');
-data = input().strip().split(',')
-rows = int(data[0].strip())
-cols = int(data[1].strip())
+print('Enter the number of rows and columns in the list: ',end=''); #Ask for two numbers, row and column
+data = input().strip().split(',') #Splits the input
+rows = int(data[0].strip()) # assign number of rows
+cols = int(data[1].strip()) # assign number of columns
 
 ans = list()
 for i in range(rows):
