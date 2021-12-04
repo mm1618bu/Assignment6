@@ -1,22 +1,17 @@
 def displayPermutation(s):
-   #this function prints
-   #all the possible permutations
+   #print all possible permutations
    return ''.join(s)
 
-#this function will recursively generate all the permutations
+#recursively generates permutations
 def displayPermutationHelper(li, start , end):
-   #if the string is of length 1 then we can
-   #just display that single letter as permutation
+   #string is of length 1, just display that single letter as permutation
   
    if (start==end):
        print (displayPermutation(li))
    else:
-       #here we will iterate over whole string
-       #and generate all the possible permutations
+       #iterate over whole string
       
        for i in range(start,end+1):
-           #here we will exchange the front and back part of the string
-          
            temp = li[start]
            li[start] = li[i]
            li[i] = temp
@@ -27,7 +22,7 @@ def displayPermutationHelper(li, start , end):
            li[i] = temp
 
 
-#here we will take inpute from the user and call the function
+#here we will take input from the user
 print("HELLO USER!!!")
 s = "ABC"
 str_len = len(s)
