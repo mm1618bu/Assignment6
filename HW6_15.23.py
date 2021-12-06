@@ -23,7 +23,7 @@ def displayPermutationHelper(li, start , end):
 
 
 #here we will take input from the user
-print("HELLO USER!!!")
+print("Hi User!")
 s = "ABC"
 str_len = len(s)
 str_l = list(s)
